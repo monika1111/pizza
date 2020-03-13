@@ -63,12 +63,12 @@ export const pizzas = [
 ];
 
 export const extraIngredients = [
-    {value: 'Bacon', label: 'Bacon', price: 200},
-    {value: 'Onion', label: 'Onion', price: 300},
-    {value: 'Spinach', label: 'Spinach', price: 200},
-    {value: 'Mushrooms', label: 'Mushrooms', price: 150},
-    {value:'Olives', label: 'Olives', price: 450},
-    {value: 'Corn', label: 'Corn', price: 300},
-    {value: 'Extra Cheese', label: 'Extra Cheese', price: 100},
-    {value: 'Tomato', label: 'Tomato', price: 250}
+    {value: 'Bacon', label: 'Bacon, price: 200', price: 200},
+    {value: 'Onion', label: 'Onion, price: 300', price: 300},
+    {value: 'Spinach', label: 'Spinach, price:200', price: 200},
+    {value: 'Mushrooms', label: 'Mushrooms, price:150', price: 150},
+    {value:'Olives', label: 'Olives, price: 450', price: 450},
+    {value: 'Corn', label: 'Corn, price: 300', price: 300},
+    {value: 'Extra Cheese', label: 'Extra Cheese, price: 100', price: 100},
+    {value: 'Tomato', label: 'Tomato, price: 250', price: 250}
 ];

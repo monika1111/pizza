@@ -1,19 +1,25 @@
 .count {
     max-width: 21px;
     border: none;
-    padding: 5px 0;
+    padding: 7px 0;
     text-align: center;
-    border-top: 1px solid #aca1a1;
-    border-bottom: 1px solid #aca1a1;
+    border-top: 1px solid #d20909;
+    border-bottom: 1px solid #d20909;
 }
 
 .plus {
-    padding: 4px;
+    background: #d20909;
+    color: white;
+    padding: 8px 6px;
+    border: none;
     cursor: pointer;
 }
 
 .minus {
-    padding: 4px 6px;
+    background: #d20909;
+    color: white;
+    padding: 8px;
+    border: none;
     cursor: pointer;
 }
 

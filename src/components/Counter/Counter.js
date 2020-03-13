@@ -16,17 +16,12 @@ class Counter extends Component {
         setCount(count + 1);
     };
 
-    onChange = (e) => {
-        const {setCount} = this.props;
-        setCount(e.target.value);
-    };
-
     render() {
         const {count} = this.props;
         return (
             <div className='counter-cont'>
                 <button onClick={this.reduceCount} className='minus'>-</button>
-                <input type='text' value={count} onChange={this.onChange} className='count'/>
+                <input type='text' value={count} className='count'/>
                 <button onClick={this.increaseCount} className='plus'>+</button>
             </div>
         );
