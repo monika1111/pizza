@@ -14,11 +14,16 @@ class CartItem extends Component {
     }
 
     setCount = (value) => {
+        const {updateCart, removeItem} = this.props;
         this.setState({
             count: value
         });
 
-        this.props.updateCart({...this.props.item, count: value});
+        if(value === 0){
+            removeItem({...this.props.item, count: value});
+        } else {
+            updateCart({...this.props.item, count: value});
+        }
     };
 
     removeItem = () => {
@@ -33,12 +38,15 @@ class CartItem extends Component {
                 <div className='order-items'>
                     <div className='order-item'>
                         <p className='pizza-title'>{item.name}</p>
-                        <div className='extra-ingredients'><span className='ingredients-title'>Extra Ingredients:</span> {
-                            item.ingredients.map((value, index) =>
-                                `${value.value}${index !== item.ingredients.length - 1 ? ', ' : ''}`
-                            )
+                        {item.ingredients && item.ingredients.length ?
+                            <div className='extra-ingredients'><span
+                                className='ingredients-title'>Extra Ingredients:</span> {
+                                item.ingredients.map((value, index) =>
+                                    `${value.value}${index !== item.ingredients.length - 1 ? ', ' : ''}`
+                                )
+                            }
+                            </div>: null
                         }
-                        </div>
                         <Counter count={count} setCount={this.setCount}/>
                         <span>{item.price} ֏</span>
                         <span className='remove' onClick={this.removeItem}>Remove</span>

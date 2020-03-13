@@ -13,13 +13,15 @@ const initialState = {
 };
 
 const removeItemData = (state, {payload}) => {
-    debugger
+    const index = state.cartItems.findIndex(item => item.id === payload.id);
+    const {count, price} = state.cartItems[index];
     const items = state.cartItems.filter(item => item.id !== payload.id);
+
     return {
         ...state,
         cartItems : [...items],
-        total: state.total - payload.count,
-        totalPrice: state.totalPrice - (payload.count * payload.price)
+        total: state.total - count,
+        totalPrice: state.totalPrice - (count * price)
     }
 };
 

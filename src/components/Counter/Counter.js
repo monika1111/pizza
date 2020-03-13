@@ -8,9 +8,7 @@ class Counter extends Component {
 
     reduceCount = () => {
         const {count, setCount} = this.props;
-        if (count !== 1){
-            setCount(count - 1);
-        }
+        setCount(count - 1);
     };
 
     increaseCount = () => {

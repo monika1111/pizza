@@ -3,7 +3,6 @@ import Header from "./components/Header/Header";
 import PizzasList from "./components/PizzasList/PizzasList";
 import Basket from "./components/Basket/Basket";
 
-
 function App() {
   return (
     <div className="App">

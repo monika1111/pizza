@@ -16,7 +16,6 @@
 .basket-part {
     display: flex;
     margin-top: 14px;
-    justify-content: space-between;
     cursor: pointer;
 }
 
