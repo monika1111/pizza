@@ -22,7 +22,7 @@ class IngredientsDropDown extends Component {
 
         return (
             <Select className='ingredients'
-                    value={selectedIngredients}
+                value={selectedIngredients}
                 onChange={this.handleChange}
                 options={extraIngredients}
                 isMulti={true}
