@@ -1,0 +1,22 @@
+.pizza-item{
+    padding: 20px;
+}
+
+.pizza-img {
+    object-fit: cover;
+    width: 300px;
+    display: block;
+}
+
+.basket {
+    width: 32px;
+    object-fit: cover;
+}
+
+.basket-part {
+    display: flex;
+    margin-top: 14px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+

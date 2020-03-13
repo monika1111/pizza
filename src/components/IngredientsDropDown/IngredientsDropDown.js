@@ -1,27 +1,34 @@
 import React, {Component} from 'react';
-import { Multiselect } from 'multiselect-react-dropdown';
+import Select from 'react-select';
+import './style.css';
+import {extraIngredients} from "../../configs/constants";
 
-class MultiDropDown extends Component {
+class IngredientsDropDown extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            options: [{name: 'Srigar', id: 1},{name: 'Sam', id: 2}, {name: 'bb', id: 3}, {name: 'mm', id: 4}]
+            selectedOption: null,
         };
     }
 
+    handleChange = selectedOption => {
+        const {setIngredients} = this.props;
+        setIngredients(selectedOption);
+    };
+
     render() {
+        const { selectedIngredients } = this.props;
+
         return (
-            <Multiselect
-                options={this.state.options}
-                selectedValues={this.state.selectedValue}
-                style={{multiselectContainer: {maxWidth: '200px'}}}
-                // onSelect={this.onSelect}
-                // onRemove={this.onRemove}
-                displayValue="name"
+            <Select className='ingredients'
+                    value={selectedIngredients}
+                onChange={this.handleChange}
+                options={extraIngredients}
+                isMulti={true}
             />
         );
     }
 }
 
-export default MultiDropDown;
+export default IngredientsDropDown;
